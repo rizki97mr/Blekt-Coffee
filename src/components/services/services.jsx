@@ -8,33 +8,39 @@ const servicesData = [
     Image: Coffee1,
     title: "Cofee Espresso",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "Espresso is a concentrated shot of coffee, providing a strong and intense flavor. It is made using finely ground coffee beans and hot water, resulting in a rich and bold taste.",
   },
   {
     id: 2,
     Image: Coffee1,
     title: "Hot Cofee",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "Espresso is a concentrated shot of coffee, providing a strong and intense flavor. It is made using finely ground coffee beans and hot water, resulting in a rich and bold taste.",
   },
   {
     id: 1,
     Image: Coffee3,
     title: "Cofee Latte",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      " lattes are made by adding steamed milk to a shot of espresso, creating a smoother and creamier flavor.",
   },
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-  transition: {
-    // duration: 0.4 // increase duration for smoother animation
-    type: "spring",
-    stiffness: 150,
-    damping: 10,
-    ease: "easeInOut", //use an easing function
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4, // increase duration for smoother animation
+      type: "spring",
+      stiffness: 150,
+      damping: 10,
+      ease: "easeInOut",
+    },
   },
 };
 
@@ -78,9 +84,10 @@ const services = () => {
           }}
           className="text-sm opacity-50"
         >
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit non
-          voluptatibus aliquam corrupti, ipsam delectus alias explicabo quam
-          nesciunt minima.
+          Coffee beans are picked when they are green, then roasted to bring out
+          their flavor. How long they are roasted, and at how high a
+          temperature, affects how they taste. And their taste can help
+          determine whether you like drinking them without creamer or sweetener.
         </motion.p>
       </div>
       {/* card section */}

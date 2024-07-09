@@ -1,9 +1,10 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion } from "framer-motion";
 
+// eslint-disable-next-line react/prop-types
 const Navbar = ({ sidebar, setSidebar }) => {
   return (
-    <nav className="absolute top-0 left-0 z-40 w-full pt-10 text-white">
+    <nav className="absolute top-0 left-0 z-[9999] w-full pt-10 text-white">
       <div className="container">
         <div className="flex items-center justify-between">
           {/* logo section */}

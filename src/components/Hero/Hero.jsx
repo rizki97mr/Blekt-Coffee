@@ -26,7 +26,7 @@ const Hero = () => {
             <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
               <motion.h1
                 initial={{ opacity: 0, y: -100 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
@@ -51,21 +51,22 @@ const Hero = () => {
                 <div className="relative z-10 space-y-4">
                   <h1 className="text-2xl">Black Lifestyle Lovers,</h1>
                   <h1 className="text-sm leading-loose opacity-55">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempore, quas. Necessitatibus ipsa vero quisquam et sed
-                    exercitationem magnam beatae quis, provident in. Possimus
-                    similique excepturi ullam omnis provident amet laborum
-                    nesciunt numquam quia, minima illo quaerat non hic, velit
+                    Black coffee is simply coffee with nothing added no cream,
+                    no milk, no sweetener. When you leave out those extra
+                    ingredients, you leave out the calories, fat, and sugar that
+                    come with them. That allows you to enjoy the health benefits
+                    of coffee without additives that arent as good for you.
                   </h1>
                 </div>
                 <div className="absolute -top-6 -left-10 w-[250px] h-[190px] bg-gray-700/25"></div>
               </motion.div>
             </div>
-            {/* hero image third secton */}
+            {/* hero image secton */}
             <div className="relative">
               <motion.img
                 initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
@@ -79,7 +80,7 @@ const Hero = () => {
               {/* Orange circle ring */}
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
@@ -92,7 +93,7 @@ const Hero = () => {
               {/* big text section*/}
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
@@ -107,32 +108,39 @@ const Hero = () => {
               </motion.div>
             </div>
             {/* third div section */}
-            <motion.div
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                delay: 1.3,
-              }}
-              className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28"
-            >
-              <h1 className="font-bold leading-tight opacity-0 text-7xl ml-14">
-                Blekt Tumbler
-              </h1>
-              <div className="relative">
-                <div className="relative z-10 space-y-4">
-                  <h1 className="text-2xl">Blekt Tumbler</h1>
-                  <h1 className="text-sm leading-loose opacity-55">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempore, quas. minima illo quaerat non hic, velit
-                  </h1>
+            <div className="hidden lg:block">
+              <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                  delay: 1.3,
+                }}
+                className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28"
+              >
+                <h1 className="font-bold leading-tight opacity-0 text-7xl ml-14">
+                  Blekt Tumbler
+                </h1>
+                <div className="relative">
+                  <div className="relative z-10 space-y-4">
+                    <h1 className="text-2xl">Blekt Tumbler</h1>
+                    <h1 className="text-sm leading-loose opacity-55">
+                      Theres another possible, though minor, health benefit of
+                      black coffee. When you dont dilute your coffee, you get
+                      the antioxidants and caffeine it contains at full
+                      strength. These components are thought to be responsible
+                      for most of coffees health benefits. But youd have to add
+                      a lot of cream or sugar to weaken your coffee enough to
+                      make much difference.
+                    </h1>
+                  </div>
+                  <div className="absolute -top-6 -right-10 w-[250px] h-[190px] bg-darkGray/50"></div>
                 </div>
-                <div className="absolute -top-6 -right-10 w-[250px] h-[190px] bg-darkGray/50"></div>
-              </div>
-            </motion.div>
-            <div></div>
+              </motion.div>
+              <div></div>
+            </div>
           </div>
         </div>
         {/* sidebar Menu section */}
@@ -140,7 +148,7 @@ const Hero = () => {
           <motion.div
             initial={{ x: "100%" }}
             whileInView={{ x: 0 }}
-            className="absolute top-0 right-0 z-10 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm"
+            className="absolute top-0 right-0 z-50 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm"
           >
             <div className="flex items-center justify-center w-full h-full">
               <div className="flex flex-col items-center justify-center gap-6 text-white ">
